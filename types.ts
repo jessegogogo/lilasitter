@@ -11,8 +11,10 @@ export enum SectionId {
   HOME = 'home',
   ABOUT = 'about',
   HOW_I_WORK = 'how-i-work',
+  ROLE_EXPLANATION = 'role-explanation',
   MEDICINES = 'medicines',
   SESSIONS = 'sessions',
+  FAQ = 'faq',
   CONTACT = 'contact'
 }
 

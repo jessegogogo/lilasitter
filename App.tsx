@@ -6,8 +6,10 @@ import { HowIWork } from './components/HowIWork';
 import { Medicines } from './components/Medicines';
 import { Sessions } from './components/Sessions';
 import { Contact } from './components/Contact';
+import { FAQ } from './components/FAQ';
 import { AiAssistant } from './components/AiAssistant';
 import { LivingBackground } from './components/LivingBackground';
+import { RoleExplanation } from './components/RoleExplanation';
 import { Language } from './types';
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
           <Hero lang={lang} avatarUrl={AVATAR_URL} />
           <About lang={lang} />
           <HowIWork lang={lang} />
+          <RoleExplanation lang={lang} />
           <Medicines lang={lang} />
           <Sessions lang={lang} />
           <Contact lang={lang} />
