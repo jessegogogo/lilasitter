@@ -26,31 +26,31 @@ export const About: React.FC<ContentProps> = ({ lang }) => {
           {lang === 'en' ? (
             <>
               <p>
-                My life has taken me through experiences that changed the way I see consciousness and the human mind. Those processes brought me into direct contact with the deeper layers of being, and taught me how opening, contraction, and integration actually unfold. They were not “mystical events,” but something that kept moving me toward what is more real.
+                My approach is grounded in safety, presence, and deep listening. I don't see this work as a clinical procedure or a purely spiritual ritual, but as a deeply human process of exploration. My role is to be a steady anchor, ensuring you are safe and supported so you can navigate your inner landscape with confidence.
               </p>
               <p>
-                Over the years, I’ve moved through ego dissolution, dark-night stretches, the body speaking for itself, old memories resurfacing, and a quiet sense of the sacred that has no form but is unmistakably clear. When you’re close to it, you simply know what you’re aligning with. None of this made me special. It just made me steadier, clearer, and more able to understand what it means to be human.
+                Over the years, I’ve learned that the most important thing I can offer is a clear, non-judgmental space. I don't aim to control your journey or impose my own interpretations. Instead, I focus on whether you remain connected to your own core, allowing the experience to unfold naturally.
               </p>
               <div className="pl-6 border-l border-earth-500/30 italic text-earth-300/90 text-xl">
                 "You walk toward the source. I keep the process unclouded."
               </div>
               <p>
-                When consciousness begins to move inward, the noise of the world fades and the real core becomes more visible. My attention stays on whether you are still connected to that layer, allowing your process to unfold in its own way. What arises from the deep doesn’t need to be pushed. It needs space.
+                Whether you are seeking healing, clarity, or a deeper understanding of yourself, I am here to walk beside you. I bring a balance of practical grounding and intuitive awareness to every session, ensuring that you feel seen, heard, and entirely safe.
               </p>
             </>
           ) : (
             <>
               <p>
-                我对意识的变化一直敏感，也走过一些会改变观看方式的深层经验。那些过程让我直接触到人的核心位置，也让我理解意识如何打开、收缩、整合。它们不是神秘体验，更像是一种持续把人带向更真实地方的力量。
+                我的方法植根于安全、在场和深度倾听。我不认为这项工作是一个临床程序或纯粹的灵性仪式，而是一个深刻的人类探索过程。我的角色是作为一个稳定的锚，确保你是安全且得到支持的，这样你就可以满怀信心地探索你的内在景观。
               </p>
               <p>
-                过去几年里，我经历过 ego 的瓦解、黑夜时期、身体开始说话、旧有记忆被重新呈现，以及一种极为安静的神性存在感。它没有形象，却非常清楚。靠近它时，人会自然知道自己正在对齐什么。这些体验没有让我“变得特别”，它们只是让我变得更稳、更清晰，对人类的心与生命有更多理解。
+                多年来，我了解到我能提供的最重要的事情是一个清晰、无评判的空间。我的目的不是控制你的旅程或强加我自己的解释。相反，我关注你是否仍然连接到你自己的核心，让体验自然展开。
               </p>
               <div className="pl-6 border-l border-earth-500/30 text-earth-300/90 text-xl font-medium">
                 “你走向本源，我让过程不被干扰。”
               </div>
               <p>
-                当意识往深处移动时，世界的噪音会变得很远，而真正的核心开始变得清楚。我的注意力放在你是否仍然连接着那一层，让你能完整经历属于你的过程。深处的东西会自己出现，我们只需要让它有出现的空间。
+                无论你是在寻求治愈、清晰，还是对自己有更深的理解，我都在这里陪你一起走。我为每一次会谈带来务实的落地感和直觉觉知的平衡，确保你感到被看见、被听见，并且完全安全。
               </p>
             </>
           )}
