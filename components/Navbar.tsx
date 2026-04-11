@@ -30,9 +30,11 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, avatarUrl }) => {
 
   const navItems = [
     { id: SectionId.ABOUT, label: lang === 'en' ? 'About' : '关于我' },
+    { id: SectionId.ROLE_EXPLANATION, label: lang === 'en' ? 'The Role' : '角色说明' },
     { id: SectionId.HOW_I_WORK, label: lang === 'en' ? 'Philosophy' : '理念' },
     { id: SectionId.MEDICINES, label: lang === 'en' ? 'Substances' : '物质介绍' },
     { id: SectionId.SESSIONS, label: lang === 'en' ? 'Sessions' : '服务' },
+    { id: SectionId.FAQ, label: lang === 'en' ? 'FAQ' : '常见问题' },
     { id: SectionId.CONTACT, label: lang === 'en' ? 'Contact' : '联系' },
   ];
 
@@ -43,9 +45,13 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, avatarUrl }) => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         
         {/* Brand / Logo Area */}
-        <div 
+        <a 
+          href={`#${SectionId.HOME}`}
           className="flex items-center gap-3 cursor-pointer group"
-          onClick={() => scrollToSection(SectionId.HOME)}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(SectionId.HOME);
+          }}
         >
           {/* Avatar (Small Circle) */}
           <div className="relative w-8 h-8 rounded-full overflow-hidden border border-earth-400/30 group-hover:border-earth-400/80 transition-colors">
@@ -59,18 +65,22 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, avatarUrl }) => {
           <span className="font-serif text-sm tracking-[0.2em] text-mist-200 group-hover:text-white transition-colors">
             LILA SITTER
           </span>
-        </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 lg:gap-10">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
+              href={`#${item.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.id);
+              }}
               className="text-[11px] uppercase tracking-[0.15em] text-stone-400 hover:text-earth-300 transition-colors"
             >
               {item.label}
-            </button>
+            </a>
           ))}
           
           {/* Language Toggle */}
@@ -108,13 +118,17 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, avatarUrl }) => {
       {isOpen && (
         <div className="absolute top-0 left-0 w-full h-screen bg-forest-950 flex flex-col items-center justify-center space-y-8 z-40">
            {navItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
+              href={`#${item.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.id);
+              }}
               className="text-xl font-serif text-mist-100 italic"
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </div>
       )}
