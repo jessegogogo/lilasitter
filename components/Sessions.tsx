@@ -65,16 +65,28 @@ export const Sessions: React.FC<ContentProps> = ({ lang }) => {
             <h4 className="font-serif text-xl text-mist-100 mb-6 italic">
               {lang === 'en' ? 'Exchange' : '费用'}
             </h4>
-            <ul className="space-y-4 font-sans text-sm text-mist-200/80 font-light">
-              <li className="flex justify-between border-b border-white/5 pb-2">
-                <span>{lang === 'en' ? 'Preparation & Integration' : '旅程准备 & 整合'}</span>
-                <span className="text-earth-300">{lang === 'en' ? 'from $120' : '$120 起'}</span>
-              </li>
-              <li className="flex justify-between border-b border-white/5 pb-2">
-                <span>{lang === 'en' ? 'Trip Sitting' : '旅程陪伴'}</span>
-                <span className="text-earth-300">{lang === 'en' ? 'Customized' : '根据时长定制'}</span>
-              </li>
-            </ul>
+            <div className="p-6 border border-earth-500/20 bg-forest-900/50 rounded-sm">
+              <div className="flex justify-between items-baseline mb-6">
+                <span className="text-earth-300 font-serif text-2xl">$800</span>
+                <span className="text-mist-200/60 text-[10px] uppercase tracking-widest">
+                  {lang === 'en' ? 'Full Journey Package' : '全程陪伴套餐'}
+                </span>
+              </div>
+              <ul className="space-y-4 font-sans text-sm text-mist-200/80 font-light">
+                <li className="flex items-start gap-3 border-b border-white/5 pb-2">
+                  <span className="text-earth-500 mt-1">/</span>
+                  <span>{lang === 'en' ? '2-hour Preparation Session' : '2小时旅程准备会谈'}</span>
+                </li>
+                <li className="flex items-start gap-3 border-b border-white/5 pb-2">
+                  <span className="text-earth-500 mt-1">/</span>
+                  <span>{lang === 'en' ? 'Full-day Trip Companionship' : '全天旅程陪伴'}</span>
+                </li>
+                <li className="flex items-start gap-3 border-b border-white/5 pb-2">
+                  <span className="text-earth-500 mt-1">/</span>
+                  <span>{lang === 'en' ? '1 Integration Session' : '1次整合会谈'}</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* --- ETHICS --- */}
