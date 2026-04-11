@@ -45,48 +45,53 @@ export const Hero: React.FC<ContentProps> = ({ lang, avatarUrl }) => {
       </div>
 
       {/* --- CONTENT --- */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center pt-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-2 gap-4 sm:gap-12 items-center pt-20">
         
         {/* Left: Text */}
-        <div className="text-left space-y-8 order-2 md:order-1">
+        <div className="text-left space-y-6 sm:space-y-10">
           
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-mist-100 leading-tight tracking-wide opacity-0 animate-fade-in drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-7xl text-mist-100 leading-tight tracking-wide opacity-0 animate-fade-in drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
             {lang === 'en' ? (
               <>
-                When you walk inward,<br />
-                <span className="text-earth-300 italic">I walk with you.</span>
+                Psychedelic Trip Sitting <br />
+                <span className="text-earth-300 italic">& Integration</span>
               </>
             ) : (
               <>
-                当你向内走，<br />
-                <span className="text-earth-300">我在这里陪你。</span>
+                致幻剂陪伴 <br />
+                <span className="text-earth-300 italic">& 整合支持</span>
               </>
             )}
           </h1>
 
-          <div className="w-16 h-[1px] bg-earth-400/50 opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}></div>
+          <div className="w-12 sm:w-16 h-[1px] bg-earth-400/50 opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}></div>
 
-          <h2 className="font-sans text-xs md:text-sm text-earth-400/90 uppercase tracking-[0.15em] leading-relaxed max-w-xl opacity-0 animate-fade-in text-shadow" style={{ animationDelay: '0.6s' }}>
-            {lang === 'en' ? (
-              "Consciousness Companionship · Psilocybin · LSD · MDMA · Integration"
-            ) : (
-              "意识陪伴 · Psilocybin · LSD · MDMA · Integration"
-            )}
-          </h2>
-
-          <p className="font-serif text-lg text-mist-200/80 leading-relaxed max-w-lg opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <p className="font-serif text-sm sm:text-lg md:text-xl text-mist-200/90 leading-relaxed max-w-lg opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
              {lang === 'en' ? (
-                "When consciousness opens into deeper layers, a form of clarity with a sacred quality often appears. Steady presence allows this clarity to keep working and become a real shift."
+                "Grounded, one-on-one support in the San Francisco Bay Area"
              ) : (
-                "当意识进入更深的层面时，人往往会触到一种带着神性力量的清明，而稳定的陪伴让这份清明能够继续作用，形成真正的转变。"
+                "旧金山湾区稳固的一对一支持"
              )}
           </p>
+
+          <div className="pt-2 sm:pt-4 opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
+            <a 
+              href={`#${SectionId.CONTACT}`}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(SectionId.CONTACT)?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="inline-block px-4 py-2 sm:px-10 sm:py-4 bg-earth-500/10 hover:bg-earth-500/20 border border-earth-500/40 text-earth-300 font-serif italic tracking-widest transition-all duration-500 rounded-sm hover:translate-y-[-2px] uppercase text-[10px] sm:text-sm whitespace-nowrap"
+            >
+              {lang === 'en' ? 'Book a free call' : '预约免费咨询'}
+            </a>
+          </div>
 
         </div>
 
         {/* Right: Photo Placeholder (Mushroom Cap / Portrait) */}
-        <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in" style={{ animationDelay: '1s' }}>
-           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border border-white/10 ring-1 ring-earth-500/30 group">
+        <div className="flex justify-center md:justify-end animate-fade-in" style={{ animationDelay: '1s' }}>
+           <div className="relative w-32 h-32 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border border-white/10 ring-1 ring-earth-500/30 group">
               {/* Image from placeholder URL - Removed grayscale classes */}
               <img 
                 src={displayAvatar} 
